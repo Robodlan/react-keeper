@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function ToDoItem() {
+export default function ToDoItem(props) {
     return (
         <div>
-            <li>{todoItem}</li>
+            <li>{props.item}</li>
         </div>
     )
 }
