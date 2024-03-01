@@ -1,9 +1,15 @@
 import React from "react";
 
-export default function ToDoItem(props) {
+function ToDoItem(props) {
+    function handleClick() {
+
+    }
     return (
-        <div>
-            <li>{props.item}</li>
+        <div onClick={handleClick} >
+            <li style={{textDecoration: "line-through"}}>{props.item}</li>
         </div>
     )
 }
+
+export default ToDoItem;
+
