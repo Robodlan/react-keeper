@@ -76,5 +76,6 @@ li {
   text-align: left;
   position: relative;
   padding: 0.5rem;
+  cursor: pointer;
   font-size: 2rem;
 }
