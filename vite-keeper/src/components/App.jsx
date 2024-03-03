@@ -31,7 +31,14 @@ function App() {
       <div className="heading">
         <h1>To-Do List</h1>
       </div>
-      <InputArea />
+      {inputText.map(value => {
+        <InputArea 
+          text={value}
+          onClick={handleChange}
+          onCheck={addItem}
+        />
+        
+        })}
       <div>
         <ul>
           {items.map((todoItem, index) => (
