@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
 function ToDoItem(props) {
+    const [state, setState] = useState(false)
+
+    function handleClick() {
+        setState(true)
+    };
   return (
-        <div onClick={()=> {
-         props.onCheck(props.id)
-         console.log(props.id)
-        }} >
-            <li>{props.item}</li>
+        <div onClick={handleClick} >
+            <li style={{textDecoration: state ? "line-through" : "none"}} >{props.item}</li>
         </div>
     )
 }
