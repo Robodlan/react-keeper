@@ -3,47 +3,46 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Note from "./Note";
 import CreateArea from "./CreateArea";
-import { nanoid } from 'nanoid'
+import { nanoid } from "nanoid";
 
 function App() {
-  const [note, setNote] = useState([])
+  const [note, setNote] = useState([]);
 
   function addNote(newNote) {
-    setNote(prev => {
-      return [...prev, newNote]
-    })
+    setNote((prev) => {
+      return [...prev, newNote];
+    });
   }
 
   function deleteItem(id){
    setNote(prev => {
     return prev.filter((item, index)=> {
-      return index !== id
+      return index !== id;
     })
    })
   }
-
   return (
     <div>
       <Header />
-      <CreateArea onAdd={addNote} />
-      {note.map((newNote, index) => {
+      <CreateArea onChange={addNote} />
+      {note.map((note, index) => {
         return (
           <Note
-            onCheck={deleteItem}
+            delete={deleteItem}
             key={nanoid()}
             id={index}
-            title={newNote.title}
-            content={newNote.content}
+            title={note.title}
+            content={note.content}
           />
-        )
+        );
       })}
+
       <Footer />
     </div>
   );
 }
 
 export default App;
-
 
 //CHALLENGE:
 //1. Implement the add note functionality.
