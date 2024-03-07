@@ -44,6 +44,9 @@ function App() {
 
 export default App;
 
+// npm install @mui/material @emotion/react @emotion/styled (MATERIAL UI INSTALATION)
+
+
 //CHALLENGE:
 //1. Implement the add note functionality.
 //- Create a constant that keeps track of the title and content.
