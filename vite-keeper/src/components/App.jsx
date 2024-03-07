@@ -3,6 +3,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Note from "./Note";
 import CreateArea from "./CreateArea";
+import { nanoid } from 'nanoid'
 
 function App() {
   const [note, setNote] = useState([])
@@ -29,7 +30,7 @@ function App() {
         return (
           <Note
             onCheck={deleteItem}
-            key={index}
+            key={nanoid()}
             id={index}
             title={newNote.title}
             content={newNote.content}
