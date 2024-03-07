@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Button from '@mui/material/Button';
 
 function CreateArea(props) {
   const [note, setNote] = useState({
@@ -38,10 +39,11 @@ function CreateArea(props) {
           rows="3"
           value={note.content}
         />
-        <button onClick={submitNote}>Add</button>
+        <Button  onClick={submitNote} variant="outlined">Add</Button>
       </form>
     </div>
   );
 }
 
 export default CreateArea;
+{/* <button onClick={submitNote}>Add</button> */}
